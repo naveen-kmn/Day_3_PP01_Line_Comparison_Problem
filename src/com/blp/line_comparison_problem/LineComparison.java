@@ -38,14 +38,25 @@ public class LineComparison
 
         len34 = Math.sqrt((x4 - x3) * (x4 - x3) + (y4 - y3) * (y4 - y3));
 
-        if (len12 == len34)
+        System.out.println("Length of first line "+len12);
+
+        System.out.println("Length of first line "+len34);
+
+        int d = Double.compare(len12, len34);
+
+        if (d==0)
         {
-            System.out.println("The length is equal");
+            System.out.println("Length 1 and Length 2 are equal");
+        }
+
+        else if(d==1)
+        {
+            System.out.println("Length 1 is greater than Length 2");
         }
 
         else
         {
-            System.out.println("The length is not equal");
+            System.out.println("Length 1 is less than Length 2");
         }
     }
 }
